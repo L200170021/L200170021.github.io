@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>EPIC GAMES STORE</title>
+  <title>See You Next Game</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +22,16 @@
   <link href="css/clean-blog.min.css" rel="stylesheet">
 
 </head>
+<script type="text/javascript"> function disableSelection(target){
+  if (typeof target.onselectstart!="undefined") //IE route
+      target.onselectstart=function(){return false}
+  else if (typeof target.style.MozUserSelect!="undefined") //Firefox route
+      target.style.MozUserSelect="none"
+  else //All other route (ie: Opera)
+      target.onmousedown=function(){return false}
+  target.style.cursor = "default"
+  }
+</script>
 
 <body>
 
@@ -47,16 +57,17 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/post3-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/post-ddl.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Mengenal tentang EPIC GAMES STORE</h1>
+            <h1><font color="gold">Mari Belajar tentang DDL</font></h1>
+            <h2 class="subheading">Di Sini Kita Akan Membicarakan DDL</h2>
             <span class="meta">Posted by
               <a href="about.html">L200170021</a>
-              on August 19, 2019</span>
+              on September 19, 2019</span>
           </div>
         </div>
       </div>
@@ -68,39 +79,55 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <img class="img-fluid" src="img/Epiclogo.jpg" alt="">
-          <p><b>EPIC GAMES STORE</b>	</br></br>
-          EGS adalah Sebuah perusahaan pengembangan perangkat lunak dan permainan video yang berbasis di Cary, Carolina Utara. Perusahaan tersebut didirikan oleh Tim Sweeney dengan nama Potomac Computer Systems pada 1991.
-          EGS merupakan layanan distribusi digital, manajemen hak digital, permainan video multipemain, dan komunikasi untuk berbagai platform yang dikembangkan oleh Massive Entertainment. Uplay dipakai secara eksklusif untuk mendistribusikan permainan video game. Ada pula permainan video pihak ketiga yang dijual di toko digitalnya dan menggunakan teknologi Epic Store Sendiri.</br></br>
-
-          <p><b>Manfaat dari Epic Games Store</b></br>
-          Tidak Sama Seperti Steam,Uplay. Epic Games Store menyediakan game ekslusif yang dipasang develover game khusus epic game store dan juga EGS tidak terhubung dalam komunitas para pemain game (istilahnya tidak aada forum), tetapi tetap dapat berhubungan dengan game, misalkan mekanisme, cara bermain, produk game, dan lain sebagainya. Sayangnya Anda Tidak dapat memberikan komentar dan membuka topik pembicaraan.</b></br></br>
-          
-          <p><b>Jenis Game dalam Epic Games Store</b></br></br>
-            <img src="img/EGS.jpg" alt=""></br></br>
-
-<p><b><u>Beberapa daftar Game Terbaru dari EGS </b></u></br>
- •	Fortnite</br>
- •	Bonderland 3</br>
- •	Metro Exodus</br>
- •	Control</br>
- •	Tom Clancy Breakpoint</br>
- •	Dan masih banyak game ekslusif lagi tentunya</br>
-              
+            <img class="img-fluid" src="img/Logoddl.png" alt="">
+          <p><b><u>DDL (Data Definition Language)</b></u></br>
+          DDL adalah kumpulan perintah SQL yang digunakan untuk membuat (create), mengubah (alter) dan menghapus (drop) struktur dan definisi tipe data dari objek-objek database.</br></br>
+          Objek-objek database pada yang dimaksud - pada MySQL - adalah sebagai berikut :</br>
+•	Database</br>
+•	Table</br>
+•	View</br>
+•	Index</br>
+•	Procedure (Stored Procedure)</br>
+•	Function</br>
+•	Trigger</br>
 </p>
-              
-<p><b><i>Contoh Pembelian Game di Steam :</b></i></br>
-    1. <a href="https://www.epicgames.com/store/en-US/"><b>Download EGS di sini</b></a></br>
-    2. Jalankan software dan log in pada EGS Launcher</br>
-    3. Cari game yang diinginkan melalui menu yang tersedia atau menggunakan fitur “search”</br>
-    4. lihat harga game yang diinginkan dan beli menggunakan kartu debit/kredit.</br>
-    5. klik reedem dan download gamenya</br>
-    6. Mainkan gamenya</br></br>
-    Note : Games diEpic Games tidak dapat dibeli dengan code dari marketpalce lain.harus langsung dari aplikasi Epic Game Storenya
-
-
+<p>contoh perintah DDL yang digunakan pada MySQL.</br></br>
+•	<b>Pembuatan (CREATE)</b></br>
+o	CREATE DATABASE</br>
+o	CREATE FUNCTION</br>
+o	CREATE INDEX</br>
+o	CREATE PROCEDURE</br>
+o	CREATE TABLE</br>
+o	CREATE TRIGGER</br>
+o	CREATE VIEW</br></br>
+•	<b>Perubahan (ALTER dan RENAME)</b></br>
+o	ALTER DATABASE</br>
+o	ALTER FUNCTION</br>
+o	ALTER PROCEDURE</br>
+o	ALTER TABLE</br>
+o	ALTER VIEW</br>
+o	RENAME TABLE</br></br>
+•	<b>Penghapusan (DROP)</b></br>
+o	DROP DATABASE</br>
+o	DROP FUNCTION</br>
+o	DROP INDEX</br>
+o	DROP PROCEDURE</br>
+o	DROP TABLE</br>
+o	DROP TRIGGER</br>
+o	DROP VIEW</br>
 </p>
 
+<p><i>Contoh penggunaan :</i></br>
+-- Perintah berikut akan membuat table pada database kita dengan nama "ms_karyawan"</br>
+CREATE TABLE ms_karyawan (</br>
+  kode_cabang varchar(10) default NULL,</br>
+  kode_karyawan varchar(10) NOT NULL,</br>
+  nama_depan varchar(8) default NULL,</br>
+  nama_belakang varchar(9) default NULL,</br>
+  jenis_kelamin varchar(1) default NULL,</br>
+  PRIMARY KEY  (kode_karyawan))</br>
+
+</p>
         </div>
       </div>
     </div>
